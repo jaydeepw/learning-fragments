@@ -49,7 +49,6 @@ import android.widget.Button;
       }
     }
 	  
-	  
 	  // May also be triggered from the Activity
 	  public void updateDetail() {
 	    // Create fake data
