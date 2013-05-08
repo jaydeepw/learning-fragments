@@ -2,7 +2,7 @@ package com.learning.learningfragments;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,22 +30,21 @@ import android.widget.Button;
 	    return view;
 	  }
 
-	  public interface OnItemSelectedListener {
-	      public void onRssItemSelected(String link);
-	  }
+	public interface OnItemSelectedListener {
+		public void onRssItemSelected(String link);
+	}
 	  
 	@Override
     public void onAttach(Activity activity) {
       super.onAttach(activity);
       
-      Log.v(TAG, "#onAttach");
+      Log.v( TAG, "#onAttach" );
       
       if( activity instanceof OnItemSelectedListener ) {
     	  Log.v( TAG, " must implemenet MyListFragment.OnItemSelectedListener" );
-        listener = (OnItemSelectedListener) activity;
+    	  listener = (OnItemSelectedListener) activity;
       } else {
-        throw new ClassCastException( activity.toString()
-            + " must implemenet MyListFragment.OnItemSelectedListener" );
+    	  throw new ClassCastException( activity.toString()  + " must implemenet MyListFragment.OnItemSelectedListener" );
       }
     }
 	  

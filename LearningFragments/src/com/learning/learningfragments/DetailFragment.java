@@ -2,16 +2,17 @@ package com.learning.learningfragments;
 
 import com.learning.learningfragments.R;
 
-import android.app.Fragment;
+
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class DetailFragment extends Fragment {
 	
+public class DetailFragment extends Fragment {
 	private static final String TAG = DetailFragment.class.getSimpleName();
 	
 	 @Override
